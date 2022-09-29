@@ -1,0 +1,53 @@
+#navbar {
+  color: #09a890;
+  display: flex;
+  /* border: 1px solid grey; */
+  border-left: 0;
+  border-right: 0;
+  width: 99%;
+  height: 22px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  /* left: 0; */
+  /* margin: auto; */
+  /* text-align: center; */
+  justify-content: space-between;
+}
+#navbar > div:nth-child(2) {
+  align-items: center;
+  display: flex;
+  /* border: 1px solid red; */
+  width: 35%;
+  height: 50px;
+  justify-content: space-between;
+  list-style: none;
+  padding-right: 10px;
+}
+#navbar img {
+  height: 40px;
+}
+
+#navbar > div:first-child {
+  width: 40%;
+  /* border: 1px solid red; */
+}
+#navbar input {
+  width: 100%;
+  padding: 9px 10px;
+  background-image: url("/image/green-search-icon-283902.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  margin-left: 20px;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+
+#navbar input::after {
+  content: "search";
+}

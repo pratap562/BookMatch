@@ -1,0 +1,34 @@
+#books {
+  margin-top: 50px;
+  font-size: 15px;
+  width: 95%;
+  display: grid;
+  grid-template: repeat(1, 200px) / repeat(3, 1fr);
+  margin: auto;
+  text-align:justify;
+  /* border: 3px solid black; */
+  gap: 20px;
+}
+#books > div {
+  /* margin: auto; */
+  /* width: 24vw; */
+  display: flex;
+  /* border: 1px solid red; */
+  gap: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#books > div > div:first-child {
+  width: 30%;
+  margin-top: -15px;
+  /* border: 1px solid blue; */
+}
+#books > div > div:last-child {
+  width: 70%;
+  margin-top: -15px;
+  padding-right: 20px;
+  /* border: 3px solid black; */ */
+}
+#books img {
+  width: 100%;
+
+}
