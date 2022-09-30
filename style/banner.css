@@ -1,0 +1,46 @@
+#banner {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+  /* padding-left: 10px; */
+}
+#banner > div {
+  margin-top: 40px;
+  width: 47%;
+  /* border: 1px solid red; */
+  height: 250px;
+}
+#banner > div:first-child {
+  background-image: url("/image/orange.jpg");
+  background-size: cover;
+  display: flex;
+  padding-right: 10px;
+}
+#banner > div:last-child {
+  /* background-image: url("/image/1440x900-yellow-orange-solid-color-background.jpg"); */
+  background-color: #ebb437;
+  display: flex;
+}
+
+#banner > div > div:first-child {
+  width: 40%;
+  /* border: 1px solid red; */
+}
+#banner > div:last-child > div:first-child {
+  /* border: 2px solid red; */
+  width: 38%;
+}
+#banner > div > div:last-child {
+  width: 60%;
+  /* border: 1px solid red; */
+}
+
+#banner img {
+  height: 95%;
+}
+#banner > div > div:first-child {
+  margin-top: -20px;
+}
