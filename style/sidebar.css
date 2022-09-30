@@ -9,11 +9,11 @@ body {
   scroll-behavior: smooth;
 }
 #main {
-  height: 200vh;
-  width: 80vw;
+  /* height: 200vh; */
+  width: 98vw;
   margin-left: 18vw;
-  background-color: #e8f5e9;
   /* background-color: #e8f5e9; */
+  background-color: #e8f5e9;
   /* border: 1px solid red; */
   position: relative;
 }

@@ -36,7 +36,7 @@
   width: 40%;
   /* border: 1px solid red; */
 }
-#navbar input {
+#navbar input:first-child {
   width: 100%;
   padding: 9px 10px;
   background-image: url("/image/green-search-icon-283902.png");
@@ -48,6 +48,6 @@
   border-radius: 8px;
 }
 
-#navbar input::after {
+/* #navbar input::after {
   content: "search";
-}
+} */

@@ -13,7 +13,7 @@
   </head>
   <body>
     <div id="container">
-        <!-- SIDEBAR -->
+      <!-- SIDEBAR -->
       <div id="sidebar">
         <!-- top section logo and all list items -->
         <div>
@@ -38,7 +38,10 @@
         <!-- 1.Navbar -->
         <div id="navbar">
           <div>
-            <input type="search" placeholder="Search Book/ Author/ IBSN">
+            <form id="form">
+              <input type="search" id="searchInput" placeholder="Search Book/ Author/ IBSN">
+              <input type="submit" value="">
+            </form>
 
           </div>
           <div>
@@ -91,6 +94,28 @@
 
         <!-- 4.all books -->
         <div id="books">
+          <!-- <div>
+            <div>
+              <img src="image/the-flowers-of-evil-6.jpg" alt="">
+            </div>
+            <div>
+              <h1>Missing Men</h1>
+              <p>Joyce Johnson</p>
+              <p>Joyce Johnson's classic memoir of growing up female in the 1950s, Minor Characters, was one of the initiators of an important new genre the personal story of a</p>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <img src="image/the-flowers-of-evil-6.jpg" alt="">
+            </div>
+            <div>
+              <h1>Missing Men</h1>
+              <p>Joyce Johnson</p>
+              <p>Joyce Johnson's classic memoir of growing up female in the 1950s, Minor Characters, was one of the initiators of an important new genre the personal story of a</p>
+            </div>
+          </div>
+
           <div>
             <div>
               <img src="image/the-flowers-of-evil-6.jpg" alt="">
@@ -123,23 +148,43 @@
               <p>Joyce Johnson's classic memoir of growing up female in the 1950s, Minor Characters, was one of the initiators of an important new genre the personal story of a</p>
             </div>
           </div>
+
+          <div>
+            <div>
+              <img src="image/the-flowers-of-evil-6.jpg" alt="">
+            </div>
+            <div>
+              <h1>Missing Men</h1>
+              <p>Joyce Johnson</p>
+              <p>Joyce Johnson's classic memoir of growing up female in the 1950s, Minor Characters, was one of the initiators of an important new genre the personal story of a</p>
+            </div>
+          </div> -->
+
+          
         
         </div>
 
       </div>
     </div>
   </body>
-  <script>
+  <!-- <script>
     let count = 0
     navbar.addEventListener('click',fun)
     function fun(){
       count++
+      main = document.querySelector('#main')
       if(count%2==1){
-        main.style.margin='0'
+        main.style.marginLeft='0'
         main.style.width='98vw'
       }else{
         main.style.marginLeft='18vw'
       }
     }
+  </script> -->
+  
+  
+  <script  src="/Script/bookData.js"></script>
+  <script>
+    localStorage.setItem('hel','lj')
   </script>
 </html>
