@@ -12,12 +12,21 @@
 
 // 1984 fiction
 // 1st to Die: A Novel -- crime
+// Before I Say Good-Bye --- mystery
 // Night over Water -- thriller ---
 // Anne Frank: The Diary of a Young Girl ---physology
 // Interview with the Vampire --- horror
 // A Walk to Remember --- romance
 // It Was on Fire When I Lay Down on It --- self help 
-// The Fellowship of the Ring (The Lord of the Rings, Part 1) -- fantasy
+// The Fellowship of the Ring (The Lord of the Rings, Part 1) -- fantasy 
+
+// fantasy -- The Fellowship of the Ring (The Lord of the Rings, Part 1)
+// horror  -- Interview with the Vampire
+// mystery -- Before I Say Good-Bye
+// crime   -- 1st to Die: A Novel
+// romance -- A Walk to Remember
+// physology -- Anne Frank: The Diary of a Young Girl
+// self help -- It Was on Fire When I Lay Down on It
 
 
 
@@ -30,6 +39,7 @@ for (j = 0; j < 706; j++) {
     mainMainIndArr.push(j)
 }
 
+// searchInput.value = ''
 
 let mainIndArr = [...mainMainIndArr]
 
@@ -120,7 +130,7 @@ fetch("/json/recomender/similarity.json")
     })
     .then(function (data) {
         similar = data
-        console.log(similar)
+        // console.log(similar)
     })
 fetch("/json/recomender/author.json")
     .then(function (resp) {
@@ -128,7 +138,7 @@ fetch("/json/recomender/author.json")
     })
     .then(function (data) {
         searchAuthor = data
-        console.log(searchAuthor)
+        // console.log(searchAuthor)
     })
 fetch("/json/recomender/avgRating.json")
     .then(function (resp) {
@@ -174,7 +184,7 @@ function searchResult(query) {
         }
     }
     // console.log(queryInd)
-    similarArr = similar[queryInd]
+    similarArr = [...similar[queryInd]]
     // console.log(similarArr)
 
     // mainIndArr
@@ -203,7 +213,7 @@ function searchResult(query) {
         }
     }
 
-    console.log(similarArr)
+    // console.log(similarArr)
 
     // console.log()
 
@@ -240,13 +250,18 @@ function main(tit, img, numRat, avgRat, auth) {
         p1 = document.createElement('p')
         p2 = document.createElement('p')
         p3 = document.createElement('p')
+        span = document.createElement('span')
 
         png.setAttribute('src', img[i])
         h3.innerText = tit[i]
         p1.innerText = auth[i]
-        p2.innerText = avgRat[i]
+        span.innerText = '/10'
+
+        p2.innerText = String(avgRat[i] + 4).slice(0, 3)
         p3.innerText = numRat[i]
 
+
+        p2.append(span)
         div1.append(png)
         div2.append(h3, p1, p2, p3)
 
@@ -256,4 +271,125 @@ function main(tit, img, numRat, avgRat, auth) {
 
 
     }
+
+    // after all book display i have to add event
+
+    book = document.querySelectorAll('#books>div')
+    book.forEach((el) => {
+        // console.log(el)
+        el.addEventListener('click', (event) => {
+            bookClick(event)
+        })
+    })
+}
+
+bookContain = document.querySelector('#main')
+
+let x
+// what happen when someone click on a book
+function bookClick(event) {
+    console.log(event.currentTarget)
+
+    imgOfClickBook = event.currentTarget.childNodes[0].childNodes[0].src
+    titOfClickBook = event.currentTarget.childNodes[1].childNodes[0].innerText
+    authOfClickBook = event.currentTarget.childNodes[1].childNodes[1].innerText
+    ratOfClickBook = event.currentTarget.childNodes[1].childNodes[2].innerText
+    console.log(imgOfClickBook)
+    console.log(titOfClickBook)
+    console.log(authOfClickBook)
+    console.log(ratOfClickBook)
+
+    // adding book deatails in sidebar but before selecting element of sidebar so that we can put deatail of book there
+
+    titInSidebar = document.querySelector('#sidebar > div:first-child h3')
+    let autInSidebar = document.querySelector('#sidebar > div:first-child > div:last-child > li:first-child')
+    let ratInSidebar = document.querySelector('#sidebar > div:first-child > div:last-child > li:nth-child(2)')
+    let prcInSidebar = document.querySelector('#sidebar > div:first-child > div:last-child > li:last-child')
+    let imgInSidebar = document.querySelector('#sidebar')
+    // console.log(autInSidebar.innerText)
+    // console.log(titInSidebar.innerText)
+    // console.log(ratInSidebar.innerText)
+    // console.log(prcInSidebar.innerText)
+
+    // adding book detail
+
+    prcArr = [10, 20, 25, 30, 5, 30, 35, 40, 45, 50, 50]
+    x = Math.floor((Math.random() * 10) + 1)
+    autInSidebar.innerText = authOfClickBook
+    ratInSidebar.innerText = ratOfClickBook
+    prcInSidebar.innerText = 'Price: ' + prcArr[x] + '$'
+    imgInSidebar.style.backgroundImage = 'url(' + imgOfClickBook + ')'
+    ratInSidebar.style.backgroundImage = "url('https://library.kissclipart.com/20180902/qgq/kissclipart-star-png-rating-clipart-computer-icons-clip-art-cea9cf0ebd255aaf.png')"
+
+
+
+    bookContain.style.marginLeft = '18vw'
+    // sidebar.style.width = '18vw'
+    sidebar.style.display = 'block'
+    // sidebar.style.minWidth = '200px'
+    titInSidebar.innerText = titOfClickBook
+}
+
+
+
+
+// adding event listener to filter
+
+popular = document.querySelector('#filter > div:first-child > p')
+popular.addEventListener('click', (event) => {
+    popular.style.borderBottom = '3px solid #09a890'
+    popular.style.color = '#09a890'
+    location.reload()
+})
+
+
+
+filterQuery = ['The Fellowship of the Ring (The Lord of the Rings, Part 1)', 'Interview with the Vampire', 'Before I Say Good-Bye', '1st to Die: A Novel', 'A Walk to Remember', 'Anne Frank: The Diary of a Young Girl', 'It Was on Fire When I Lay Down on It']
+
+filterQuery.forEach(function (query, filtInd) {
+    filtArrSelector = document.querySelectorAll('#filter > div:last-child p')
+
+    filtTag = filtArrSelector[filtInd]
+
+    filtTag.addEventListener('click', function (event) {
+        filtArrSelector.forEach(function (tag) {
+            tag.style.border = '0'
+            tag.style.color = 'grey'
+            // console.log(tag)
+        })
+        popular.style.borderBottom = '0'
+        popular.style.color = 'grey'
+        event.target.style.borderBottom = '3px solid #09a890'
+        event.target.style.color = '#09a890'
+        searchResult(query)
+    })
+    // console.log(filtTag)
+    // console.log(query)
+
+
+})
+
+
+
+
+// what happen when  someone click on add to cart button
+
+cart = document.querySelector('#sidebar button')
+cart.addEventListener('click', addCart)
+
+function addCart() {
+    console.log('yes')
+    arr = JSON.parse(localStorage.getItem('cart')) || []
+
+    obj = {}
+    obj.title = titOfClickBook
+    obj.author = authOfClickBook
+    obj.img = imgOfClickBook
+    obj.prc = prcArr[x]
+
+    arr.push(obj)
+
+    localStorage.setItem('cart', JSON.stringify(arr))
+    console.log(arr)
+
 }

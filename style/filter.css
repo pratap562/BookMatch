@@ -8,10 +8,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 0.5px solid grey;
+  border: 0.1px solid #b5b9bb;
   border-right: 0;
   border-left: 0;
-  color: grey;
+  color: #8c8f91;
+  /* color: red; */
   align-items: center;
   padding-left: 5px;
   padding-right: 5px;
@@ -20,7 +21,28 @@
 #filter > div:last-child {
   /* border: 1px solid blue; */
   /* padding-right: 20px; */
-  width: 55%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
+}
+
+#filter p {
+  /* border-bottom: 1px solid blue; */
+  /* border-top: 0;
+  border-left: 0;
+  border-right: 0; */
+  height: 34px;
+  margin-top: 33px;
+  box-sizing: border-box;
+}
+/* #filter > div:last-child p{
+  border: 1px solid red;
+} */
+#filter p:hover {
+  border-bottom: 3px solid #09a890;
+  color: #09a890;
+}
+#filter div:first-child p {
+  border-bottom: 2px solid #09a890;
+  color: #09a890;
 }
