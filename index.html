@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style/sidebar.css" />
-    <link rel="stylesheet" href="style/navbar.css">
-    <link rel="stylesheet" href="style/banner.css">
-    <link rel="stylesheet" href="style/filter.css">
-    <link rel="stylesheet" href="style/books.css">
+    <link rel="stylesheet" href="style/navbar.css" />
+    <link rel="stylesheet" href="style/banner.css" />
+    <link rel="stylesheet" href="style/filter.css" />
+    <link rel="stylesheet" href="style/books.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@300;400&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
     <div id="container">
@@ -19,18 +36,22 @@
         <div>
           <div>
             <img src="" alt="" />
-            <p>Hi Book lovers</p>
+            <p>Reader's Club</p>
           </div>
+          <h3>Harry Potter and the island</h3>
           <div>
-            <li>Now Reading</li>
-            <li>Boookstore</lis>
-            <li>Authors</li>
-            <li>Suvscription</li>
-            <li>Balance</li>
+            <li>Author</li>
+            <li>Rating</li>
+
+            <li>Price</li>
+            <!-- <li>Suvscription</li>
+            <li>Balance</li> -->
           </div>
         </div>
         <!-- backdrop-filter -->
-        <div></div>
+        <div>
+          <button>ADD TO CART</button>
+        </div>
       </div>
 
       <!-- main section 1.navbar 2.banner and 3.books -->
@@ -39,39 +60,57 @@
         <div id="navbar">
           <div>
             <form id="form">
-              <input type="search" id="searchInput" placeholder="Search Book/ Author/ IBSN">
-              <input type="submit" value="">
+              <input
+                type="search"
+                id="searchInput"
+                placeholder="Search Book/ Author/ IBSN"
+              />
+              <input type="submit" value="" />
             </form>
-
           </div>
           <div>
-            <li>Login</li>
-            <li>SignUp</li>
-            <li>Cart</li>
-            <li><img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt=""></li>
-          </div>          
+            <a href="login.html"> <li id="login">Login</li></a>
+            <a href="signUp.html"> <li id="signUp">SignUp</li></a>
+            <a href="cart.html"><li>Cart</li></a>
+            <li>
+              <img
+                src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png"
+                alt=""
+              />
+            </li>
+          </div>
         </div>
 
         <!-- 2. two banner images  -->
         <div id="banner">
           <div>
             <div>
-              <img src="image/the-flowers-of-evil-6.jpg" alt="">
+              <img src="image/the-flowers-of-evil-6.jpg" alt="" />
             </div>
             <div>
               <h1>Flowers of Evil</h1>
               <p>Charles Baudelaire</p>
-              <p>The translation of Baudelaire's magnum opus perhaps the most powerful and influential book of verse from the 19th cntury, won the American Book Award for thid is one of Richard Howard's greatest efforts.</p>
+              <p>
+                The translation of Baudelaire's magnum opus perhaps the most
+                powerful and influential book of verse from the 19th cntury, won
+                the American Book Award for thid is one of Richard Howard's
+                greatest efforts.
+              </p>
             </div>
           </div>
           <div>
             <div>
-              <img src="image/yellobook.png" alt="">
+              <img src="image/yellobook.png" alt="" />
             </div>
             <div>
               <h1>Missing Men</h1>
               <p>Joyce Johnson</p>
-              <p>Joyce Johnson's classic memoir of growing up female in the 1950s, Minor Characters, was one of the initiators of an important new genre the personal story of a minor player on history's stage. In Missing Men, a memoir that.</p>
+              <p>
+                Joyce Johnson's classic memoir of growing up female in the
+                1950s, Minor Characters, was one of the initiators of an
+                important new genre the personal story of a minor player on
+                history's stage. In Missing Men, a memoir that.
+              </p>
             </div>
           </div>
         </div>
@@ -82,13 +121,13 @@
             <p>Popular</p>
           </div>
           <div>
-            <p>Business</p>
-            <p>History</p>
-            <p>Economy</p>
-            <p>Fiction</p>
-            <p>FAntasy</p>
-            <p>Travelling</p>
-            <p>Philosophy</p>
+            <p>Fantasy</p>
+            <p>Horror</p>
+            <p>Mystery</p>
+            <p>Crime</p>
+            <p>Romancey</p>
+            <p>Psychology</p>
+            <p>Self-help</p>
           </div>
         </div>
 
@@ -159,32 +198,15 @@
               <p>Joyce Johnson's classic memoir of growing up female in the 1950s, Minor Characters, was one of the initiators of an important new genre the personal story of a</p>
             </div>
           </div> -->
-
-          
-        
         </div>
-
       </div>
     </div>
   </body>
-  <!-- <script>
-    let count = 0
-    navbar.addEventListener('click',fun)
-    function fun(){
-      count++
-      main = document.querySelector('#main')
-      if(count%2==1){
-        main.style.marginLeft='0'
-        main.style.width='98vw'
-      }else{
-        main.style.marginLeft='18vw'
-      }
-    }
-  </script> -->
-  
-  
-  <script  src="/Script/bookData.js"></script>
+
+  <script src="/Script/bookData.js"></script>
+  <script src="/Script/sidebarOpen.js"></script>
+  <script src="/Script/login.js"></script>
   <script>
-    localStorage.setItem('hel','lj')
+    localStorage.setItem("hel", "lj");
   </script>
 </html>

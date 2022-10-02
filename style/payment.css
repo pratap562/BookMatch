@@ -1,0 +1,86 @@
+body {
+  background-image: linear-gradient(-90deg, #e6e2af 0%, #48c9b0 100%);
+}
+
+.component {
+  position: relative;
+  width: 30%;
+  margin: 5rem auto;
+  padding: 1rem;
+
+  box-shadow: 2px 2px 10px #454545;
+  background-color: #ffffff;
+
+  text-align: center;
+}
+
+.credit-card h2 {
+  color: rgba(4, 99, 128, 1);
+}
+
+.component .credit-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.component .credit-card .line {
+  display: flex;
+}
+
+.component .credit-card .line input {
+  width: 20%; /* on définit une taille plus petite qu'il le faut, le flex-grow fera le reste */
+  flex: 1;
+  margin: 0.4rem 0.3rem;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 1rem 0;
+  padding: 4px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+
+.valid-button {
+  border: 0;
+  padding: 1rem 2rem;
+  background-color: #48c9b0;
+  color: #efecca;
+  font-weight: bold;
+  margin-top: 2rem;
+  box-shadow: 1px 1px 1px black;
+}
+
+.valid-button:hover {
+  background-color: rgba(4, 99, 128, 1);
+  box-shadow: none;
+}
+
+.total {
+  position: absolute;
+  top: 3em;
+  left: -8em;
+  z-index: -1;
+
+  background: #002f2f;
+  color: #a7a37e;
+
+  width: 100px;
+  transform: rotate(-35deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-right: 2rem;
+
+  box-shadow: 1px 1px 5px black;
+}
+
+.total p {
+  font-size: 1.5rem;
+}
