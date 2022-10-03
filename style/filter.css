@@ -46,3 +46,22 @@
   border-bottom: 2px solid #09a890;
   color: #09a890;
 }
+
+@media all and (max-width: 1100px) {
+  #filter > div:last-child {
+    width: 80%;
+  }
+  #flter {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 650px) {
+  #filter > div:last-child {
+    width: 86%;
+    /* background-color: red; */
+  }
+  #filter {
+    font-size: 14px;
+  }
+}

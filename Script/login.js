@@ -7,6 +7,7 @@ form.addEventListener('submit', signIn)
 p.value = ''
 u.value = ''
 
+
 function signIn(event) {
 
     event.preventDefault()
@@ -19,6 +20,7 @@ function signIn(event) {
         alert('Sign In Sucessfull :)')
         log = document.querySelector('#login')
         sign = document.querySelector('#signUP')
+        console.log(event)
         window.location.href = 'index.html'
         log.style.color = 'red'
         sign.style.visibility = 'hidden'
