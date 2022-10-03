@@ -178,8 +178,14 @@ function searchResult(query) {
 
     for (let index = 0; index < searchTitle.length; index++) {
         title = searchTitle[index]
+        // console.log(title, 'title')
         if (title == query) {
             queryInd = index
+            // console.log(title)
+            break
+        } else if (query == ' ' + title) {
+            queryInd = index
+            // console.log(title)
             break
         }
     }
@@ -294,16 +300,16 @@ bookContain = document.querySelector('#main')
 let x
 // what happen when someone click on a book
 function bookClick(event) {
-    console.log(event.currentTarget)
+    // console.log(event.currentTarget)
 
     imgOfClickBook = event.currentTarget.childNodes[0].childNodes[0].src
     titOfClickBook = event.currentTarget.childNodes[1].childNodes[0].innerText
     authOfClickBook = event.currentTarget.childNodes[1].childNodes[1].innerText
     ratOfClickBook = event.currentTarget.childNodes[1].childNodes[2].innerText
-    console.log(imgOfClickBook)
-    console.log(titOfClickBook)
-    console.log(authOfClickBook)
-    console.log(ratOfClickBook)
+    // console.log(imgOfClickBook)
+    // console.log(titOfClickBook)
+    // console.log(authOfClickBook)
+    // console.log(ratOfClickBook)
 
     // adding book deatails in sidebar but before selecting element of sidebar so that we can put deatail of book there
 
@@ -385,7 +391,7 @@ cart = document.querySelector('#sidebar button')
 cart.addEventListener('click', addCart)
 
 function addCart() {
-    console.log('yes')
+    // console.log('yes')
     arr = JSON.parse(localStorage.getItem('cart')) || []
 
     obj = {}
@@ -397,6 +403,6 @@ function addCart() {
     arr.push(obj)
 
     localStorage.setItem('cart', JSON.stringify(arr))
-    console.log(arr)
+    // console.log(arr)
 
 }
