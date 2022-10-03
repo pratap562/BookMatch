@@ -283,7 +283,13 @@ function main(tit, img, numRat, avgRat, auth) {
     })
 }
 
+
 bookContain = document.querySelector('#main')
+// bookContain.addEventListener("resize", size)
+
+// function size() {
+//     console.log('heellkkjj')
+// }
 
 let x
 // what happen when someone click on a book
@@ -322,14 +328,15 @@ function bookClick(event) {
     ratInSidebar.style.backgroundImage = "url('https://library.kissclipart.com/20180902/qgq/kissclipart-star-png-rating-clipart-computer-icons-clip-art-cea9cf0ebd255aaf.png')"
 
 
-
     bookContain.style.marginLeft = '18vw'
     // sidebar.style.width = '18vw'
     sidebar.style.display = 'block'
     // sidebar.style.minWidth = '200px'
     titInSidebar.innerText = titOfClickBook
+    // function muFun() {
+    //     console.log('hello brother how are you')
+    // }
 }
-
 
 
 

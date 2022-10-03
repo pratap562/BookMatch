@@ -28,7 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   </head>
-  <body>
+  <body onresize="myFun()">
     <div id="container">
       <!-- SIDEBAR -->
       <div id="sidebar">
@@ -207,6 +207,11 @@
   <script src="/Script/sidebarOpen.js"></script>
   <script src="/Script/login.js"></script>
   <script>
-    localStorage.setItem("hel", "lj");
+    // localStorage.setItem("hel", "lj");
+    contain = document.querySelector("#main");
+    side = document.querySelector("#sidebar");
+    function myFun() {
+      contain.style.marginLeft = "0";
+    }
   </script>
 </html>

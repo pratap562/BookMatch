@@ -61,3 +61,12 @@
   line-height: 20px;
   font-family: "Varela Round", sans-serif;
 }
+
+@media all and (max-width: 1100px) {
+  #banner > div:first-child {
+    display: none;
+  }
+  #banner > div:last-child {
+    width: 80%;
+  }
+}
